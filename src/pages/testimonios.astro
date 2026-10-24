@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.astro';
+
+const officialTestimonials = [
+  {
+    quote:
+      'Creo que lo que me ha permitido llegar a vivir tantos años es el hecho de disfrutarlos a concho: buena alimentación, deporte y por sobre todo el convivir constantemente con personas. Por eso estoy aquí, con gente que comparte mis temas y donde puedo mantenerme activa.',
+    author: 'Sra. Iris',
+    relation: 'Residente — 105 años',
+    context: 'Vida activa y convivencia diaria en Vitacura',
+  },
+  {
+    quote:
+      'Tengo a mi tía viviendo acá hace 3 años y está muy bien, lúcida y feliz en el hogar. La han acogido con gran calidez; es una atención muy personalizada, ella se siente en familia y es muy regalona de todos. Como apoderadas junto a mi hermana, nos cambió la vida. Recomiendo el hogar de todas maneras: mi tía está en excelentes manos y estoy profundamente agradecida de que se sienta como en su propia casa.',
+    author: 'Pilar Orpinas',
+    relation: 'Apoderada de Rosa Fernández',
+    context: 'Atención personalizada y tranquilidad familiar',
+  },
+];
+---
+
+<Layout
+  title="Testimonios Reales | Residencia Teresita de Jesús — Vitacura"
+  description="Conozca las experiencias de nuestros residentes y sus familias en Residencia Teresita de Jesús en Vitacura. Más de 33 años al cuidado del adulto mayor."
+>
+  <main>
+    <section class="text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-neutral-900" style="background-color: #0e1914 !important; color: #ffffff !important;">
+      <div class="max-w-4xl mx-auto text-center space-y-5">
+        <p class="text-xs uppercase tracking-[0.24em] text-linen-300/80 font-medium">
+          Experiencias Reales · Sede Vitacura
+        </p>
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white tracking-tight leading-tight">
+          Testimonios de Nuestra Comunidad
+        </h1>
+        <div class="w-16 h-px bg-linen-300/40 mx-auto" />
+        <p class="text-base sm:text-lg text-linen-100/90 leading-relaxed max-w-2xl mx-auto">
+          La voz de nuestros residentes y sus familias es el reflejo más transparente de nuestra dedicación diaria en Vitacura.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-linen-50">
+      <div class="max-w-5xl mx-auto space-y-16 sm:space-y-20">
+        {
+          officialTestimonials.map((item, idx) => (
+            <article class="bg-white border border-linen-300 rounded-2xl p-8 sm:p-12 shadow-xs">
+              <div class="flex items-center justify-between border-b border-linen-200 pb-4 mb-8">
+                <span class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-semibold">
+                  Testimonio 0{idx + 1}
+                </span>
+                <span class="text-xs text-neutral-500 font-medium">
+                  {item.context}
+                </span>
+              </div>
+
+              <blockquote class="font-serif italic text-xl sm:text-2xl text-navy-950 leading-relaxed font-normal">
+                “{item.quote}”
+              </blockquote>
+
+              <div class="mt-8 pt-6 border-t border-linen-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h2 class="text-base sm:text-lg font-bold text-navy-950">
+                    {item.author}
+                  </h2>
+                  <p class="text-xs sm:text-sm text-neutral-600 font-medium mt-0.5">
+                    {item.relation}
+                  </p>
+                </div>
+                <span class="text-xs uppercase tracking-wider text-neutral-400 font-semibold">
+                  Residencia Teresita de Jesús · Vitacura
+                </span>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+</Layout>

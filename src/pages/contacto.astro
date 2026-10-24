@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contacto y Visitas en Vitacura | Residencia Teresita de Jesús"
+  description="Agende una visita presencial en Residencia Teresita de Jesús, ubicada exclusivamente en Islas Marianas 1791, Vitacura. Más de 33 años de trayectoria. Teléfonos +56 9 7965 5573 y +56 9 3017 5070."
+>
+  <main>
+    <section class="text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-neutral-900" style="background-color: #0e1914 !important; color: #ffffff !important;">
+      <div class="max-w-4xl mx-auto text-center space-y-5">
+        <p class="text-xs uppercase tracking-[0.24em] text-linen-300/80 font-medium">
+          Admisión y Visitas · Sede Única en Vitacura
+        </p>
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white tracking-tight leading-tight">
+          Contacto y Visitas Presenciales
+        </h1>
+        <div class="w-16 h-px bg-linen-300/40 mx-auto" />
+        <p class="text-base sm:text-lg text-linen-100/90 leading-relaxed max-w-2xl mx-auto">
+          Estaremos honrados de recibirle en nuestra residencia de calle Islas Marianas 1791, Vitacura, para conversar sobre las necesidades de su familiar y recorrer nuestras instalaciones.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-linen-50">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.22em] text-neutral-500 font-semibold mb-2">
+              Atención Directa
+            </p>
+            <h2 class="font-serif text-2xl sm:text-3xl font-medium text-navy-950 tracking-tight leading-tight">
+              Información de nuestra sede en Vitacura
+            </h2>
+          </div>
+
+          <p class="text-base text-neutral-800 leading-relaxed">
+            Residencia Teresita de Jesús opera exclusivamente en su sede de la comuna de Vitacura. Todas las entrevistas de admisión y visitas guiadas se realizan previa coordinación.
+          </p>
+
+          <div class="space-y-6 pt-2">
+            <div>
+              <span class="block text-xs uppercase tracking-wider text-neutral-500 font-semibold mb-1">
+                Dirección en Vitacura
+              </span>
+              <p class="text-base text-neutral-800 font-medium">
+                Islas Marianas 1791, Vitacura, Santiago
+              </p>
+              <p class="text-sm text-neutral-500 mt-0.5">Sede única — Sin sucursales en otras comunas</p>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase tracking-wider text-neutral-500 font-semibold mb-1">
+                Teléfonos de Contacto
+              </span>
+              <div class="space-y-1 text-base text-neutral-800 font-medium">
+                <p><a href="tel:+56979655573" class="hover:text-forest-900 transition-colors">+56 9 7965 5573</a></p>
+                <p><a href="tel:+56930175070" class="hover:text-forest-900 transition-colors">+56 9 3017 5070</a></p>
+                <p><a href="tel:+56222190398" class="hover:text-forest-900 transition-colors">+56 2 2219 0398</a></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="block text-xs uppercase tracking-wider text-neutral-500 font-semibold mb-1">
+                Horarios de Atención y Visitas
+              </span>
+              <p class="text-base text-neutral-800 font-medium">Lunes a domingo · 10:00 a 19:00 hrs</p>
+              <p class="text-sm text-neutral-500 mt-0.5">Equipo de enfermería y cuidado operativo las 24 horas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-white border border-linen-300 rounded-2xl p-6 sm:p-10 shadow-xs">
+            <div class="mb-6 pb-5 border-b border-linen-200">
+              <h2 class="font-serif text-2xl font-medium text-navy-950">
+                Solicitar Información o Agendar Visita
+              </h2>
+              <p class="text-sm text-neutral-600 mt-1">
+                Envíenos sus datos y nos comunicaremos con usted a la brevedad desde nuestra residencia en Vitacura.
+              </p>
+            </div>
+
+            <form id="general-contact-form" class="space-y-5" novalidate>
+              <input type="hidden" name="formType" value="contacto" />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="contact-name" class="block text-xs uppercase tracking-wider text-neutral-700 font-semibold mb-1.5">
+                    Nombre completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    required
+                    placeholder="Su nombre y apellido"
+                    class="w-full px-4 py-3 bg-linen-50 border border-linen-300 rounded-lg text-navy-950 text-sm focus:outline-none focus:border-forest-900 focus:ring-1 focus:ring-forest-900 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-phone" class="block text-xs uppercase tracking-wider text-neutral-700 font-semibold mb-1.5">
+                    Teléfono de contacto *
+                  </label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    required
+                    placeholder="+56 9 1234 5678"
+                    class="w-full px-4 py-3 bg-linen-50 border border-linen-300 rounded-lg text-navy-950 text-sm focus:outline-none focus:border-forest-900 focus:ring-1 focus:ring-forest-900 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-email" class="block text-xs uppercase tracking-wider text-neutral-700 font-semibold mb-1.5">
+                  Correo electrónico
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="nombre@correo.cl"
+                  class="w-full px-4 py-3 bg-linen-50 border border-linen-300 rounded-lg text-navy-950 text-sm focus:outline-none focus:border-forest-900 focus:ring-1 focus:ring-forest-900 transition-colors"
+                />
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs uppercase tracking-wider text-neutral-700 font-semibold mb-1.5">
+                  Consulta o solicitud de visita *
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Cuéntenos brevemente las necesidades de cuidado de su familiar y su disponibilidad para visitar nuestra sede en Vitacura..."
+                  class="w-full px-4 py-3 bg-linen-50 border border-linen-300 rounded-lg text-navy-950 text-sm focus:outline-none focus:border-forest-900 focus:ring-1 focus:ring-forest-900 transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <div
+                id="contact-form-status"
+                class="hidden p-4 rounded-lg border text-sm"
+                role="status"
+                aria-live="polite"
+              ></div>
+
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  id="contact-submit-btn"
+                  class="w-full md:w-auto px-8 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-bold rounded-xl shadow-md transition-all text-center cursor-pointer disabled:opacity-60"
+                  style="background-color: #0e1914 !important; color: #ffffff !important;"
+                >
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-linen-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="w-full min-h-[350px] sm:min-h-[420px] rounded-xl overflow-hidden shadow-sm border border-linen-300 bg-linen-100">
+          <iframe
+            title="Mapa de ubicación Residencia Teresita de Jesús en Islas Marianas 1791, Vitacura"
+            src="https://www.google.com/maps?q=Islas+Marianas+1791,+Vitacura,+Santiago,+Chile&z=15&output=embed"
+            class="w-full h-[350px] sm:h-[420px] border-0 grayscale-[20%]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const contactForm = document.getElementById('general-contact-form') as HTMLFormElement | null;
+  const contactSubmitBtn = document.getElementById('contact-submit-btn') as HTMLButtonElement | null;
+  const contactStatus = document.getElementById('contact-form-status');
+
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!contactForm || !contactSubmitBtn || !contactStatus) return;
+
+    contactStatus.classList.add('hidden');
+    const originalText = contactSubmitBtn.textContent;
+    contactSubmitBtn.disabled = true;
+    contactSubmitBtn.textContent = 'Enviando mensaje...';
+
+    try {
+      const formData = new FormData(contactForm);
+      const payload = {
+        formType: 'contacto',
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+      };
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      contactStatus.classList.remove('hidden');
+      if (response.ok && result.success) {
+        contactStatus.className = 'p-4 rounded-lg border border-forest-800 bg-forest-50/50 text-forest-950 text-sm';
+        contactStatus.textContent = result.message;
+        contactForm.reset();
+      } else {
+        const errorDetails = result.errors ? Object.values(result.errors).join(' ') : '';
+        contactStatus.className = 'p-4 rounded-lg border border-red-800/40 bg-red-50 text-red-950 text-sm';
+        contactStatus.textContent = `${result.message || 'Por favor verifique los datos ingresados.'} ${errorDetails}`.trim();
+      }
+    } catch {
+      contactStatus.classList.remove('hidden');
+      contactStatus.className = 'p-4 rounded-lg border border-red-800/40 bg-red-50 text-red-950 text-sm';
+      contactStatus.textContent =
+        'No fue posible enviar su solicitud en este momento. También puede llamarnos directamente al +56 9 7965 5573.';
+    } finally {
+      contactSubmitBtn.disabled = false;
+      contactSubmitBtn.textContent = originalText;
+    }
+  });
+</script>
