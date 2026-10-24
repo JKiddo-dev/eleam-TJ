@@ -1,0 +1,91 @@
+---
+const WHATSAPP_URL =
+  'https://wa.me/56979655573?text=Hola%2C%20quisiera%20consultar%20por%20cupos%20y%20visitas%20en%20Residencia%20Teresita%20de%20Jes%C3%BAs%20en%20Vitacura.';
+
+const footerLinks = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Quiénes Somos', href: '/quienes-somos' },
+  { label: 'Instalaciones', href: '/#instalaciones' },
+  { label: 'Testimonios', href: '/testimonios' },
+  { label: 'Trabaja con Nosotros', href: '/trabaja-con-nosotros' },
+  { label: 'Contacto y Visitas', href: '/contacto' },
+];
+---
+
+<footer class="bg-white text-neutral-800 border-t border-neutral-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-neutral-200">
+      <div class="md:col-span-5 space-y-4">
+        <p class="font-serif text-2xl sm:text-3xl font-bold text-neutral-950 tracking-tight">
+          Residencia Teresita de Jesús
+        </p>
+        <p class="text-xs uppercase tracking-[0.2em] text-neutral-600 font-bold">
+          Más de 33 años al cuidado del adulto mayor · Sede exclusiva en Vitacura
+        </p>
+        <p class="text-sm text-neutral-600 leading-relaxed max-w-sm pt-1">
+          Iniciada en 1988 por la promesa de cuidar a nuestros mayores con amor y respeto. Nos dedicamos al cuidado clínico riguroso, la supervisión médica continua y la tranquilidad familiar en nuestra única casa en Vitacura.
+        </p>
+      </div>
+
+      <div class="md:col-span-3 space-y-3">
+        <p class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">
+          Navegación
+        </p>
+        <ul class="space-y-2.5 text-sm">
+          {
+            footerLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-neutral-700 hover:text-forest-900 font-medium hover:font-bold hover:underline underline-offset-4 transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="md:col-span-4 space-y-3">
+        <p class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold">
+          Ubicación y Contacto
+        </p>
+        <div class="space-y-1.5 text-sm leading-relaxed">
+          <p class="font-bold text-neutral-950">Islas Marianas 1791, Vitacura</p>
+          <p class="text-neutral-600">Región Metropolitana, Santiago de Chile</p>
+          <p class="text-neutral-500 text-xs font-medium">Sede única — Sin sucursales en otras comunas</p>
+        </div>
+        <div class="pt-3 space-y-1 text-sm">
+          <p>
+            <span class="text-neutral-500 font-medium">Teléfonos:</span>{' '}
+            <a href="tel:+56979655573" class="text-neutral-950 font-bold hover:text-forest-900 transition-colors">+56 9 7965 5573</a>
+            <span class="text-neutral-400 mx-1">/</span>
+            <a href="tel:+56930175070" class="text-neutral-950 font-bold hover:text-forest-900 transition-colors">+56 9 3017 5070</a>
+          </p>
+          <p>
+            <span class="text-neutral-500 font-medium">Red fija:</span>{' '}
+            <a href="tel:+56222190398" class="text-neutral-950 font-bold hover:text-forest-900 transition-colors">+56 2 2219 0398</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+      <p>© {new Date().getFullYear()} Residencia Teresita de Jesús. Desde 1988.</p>
+      <p>Islas Marianas 1791 · Vitacura · Santiago</p>
+    </div>
+  </div>
+</footer>
+
+<a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp a Residencia Teresita de Jesús"
+  class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-lg hover:shadow-xl flex items-center justify-center transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.535 5.862l-1.535 5.603 5.755-1.509c1.693.924 3.633 1.449 5.699 1.449 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" />
+  </svg>
+</a>

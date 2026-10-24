@@ -1,0 +1,89 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Residencia Teresita de Jesús | Más de 33 años al cuidado del adulto mayor · Sede exclusiva en Vitacura',
+  description = 'Residencia exclusiva para el adulto mayor en Vitacura (Islas Marianas 1791). Más de 33 años de trayectoria iniciada en 1988, enfermería permanente 24 horas y calidez humana.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://residenciateresitadejesus.cl');
+
+const schemaOrg = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: 'Residencia Teresita de Jesús',
+  description: description,
+  url: 'https://residenciateresitadejesus.cl',
+  telephone: '+56 9 7965 5573',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Islas Marianas 1791',
+    addressLocality: 'Vitacura',
+    addressRegion: 'Región Metropolitana',
+    addressCountry: 'CL',
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Vitacura',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -33.3864,
+    longitude: -70.5668,
+  },
+};
+---
+
+<!doctype html>
+<html lang="es-CL" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Casa de reposo en Vitacura, Residencia adulto mayor Vitacura, residencia senior Vitacura, cuidado adulto mayor Vitacura, Residencia Teresita de Jesús"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta name="geo.region" content="CL-RM" />
+    <meta name="geo.placename" content="Vitacura, Santiago, Chile" />
+    <meta name="geo.position" content="-33.3864;-70.5668" />
+    <meta name="ICBM" content="-33.3864, -70.5668" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Residencia Teresita de Jesús — Vitacura" />
+    <meta property="og:image" content="https://residenciateresitadejesus.cl/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+  </head>
+  <body class="bg-[#F9F8F6] text-neutral-900 font-sans antialiased flex flex-col min-h-screen" style="background-color: #F9F8F6; color: #171717;">
+    <Navbar />
+    <div class="flex-1">
+      <slot />
+    </div>
+    <Footer />
+  </body>
+</html>
