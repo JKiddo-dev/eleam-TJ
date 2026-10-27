@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = 'Residencia Teresita de Jesús | Más de 33 años al cuidado del adulto mayor · Sede exclusiva en Vitacura',
-  description = 'Residencia exclusiva para el adulto mayor en Vitacura (Islas Marianas 1791). Más de 33 años de trayectoria iniciada en 1988, enfermería permanente 24 horas y calidez humana.',
+  title = 'Residencia Teresita de Jesús | Residencia de Adulto Mayor · Islas Marianas 1791, Vitacura',
+  description = 'Residencia exclusiva para el adulto mayor en Islas Marianas 1791, Vitacura. Piezas individuales y compartidas, enfermería permanente 24 horas y trayectoria desde el 12 de marzo de 1988.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://residenciateresitadejesus.cl');
@@ -68,7 +68,7 @@ const schemaOrg = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Residencia Teresita de Jesús — Vitacura" />
-    <meta property="og:image" content="https://residenciateresitadejesus.cl/favicon.svg" />
+    <meta property="og:image" content="https://residenciateresitadejesus.cl/images/residencia/01-jardin-convivencia.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
