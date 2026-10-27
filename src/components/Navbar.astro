@@ -3,8 +3,8 @@ const pathname = Astro.url.pathname;
 
 const navItems = [
   { label: 'Inicio', href: '/' },
+  { label: 'Servicios e Instalaciones', href: '/servicios-e-instalaciones' },
   { label: 'Quiénes Somos', href: '/quienes-somos' },
-  { label: 'Instalaciones', href: '/#instalaciones' },
   { label: 'Testimonios', href: '/testimonios' },
   { label: 'Trabaja con Nosotros', href: '/trabaja-con-nosotros' },
 ];
@@ -17,7 +17,7 @@ const navItems = [
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row items-center justify-between gap-1.5">
       <p class="font-normal text-center sm:text-left text-neutral-200" style="color: #e5e7eb !important;">
-        Islas Marianas 1791, Vitacura <span class="hidden sm:inline mx-2 text-neutral-400">|</span> <span class="block sm:inline text-neutral-200">Piezas individuales y compartidas</span>
+        Islas Marianas 1791, Vitacura <span class="hidden sm:inline mx-2 text-neutral-400">|</span> <span class="block sm:inline text-neutral-200">Casa de 1 piso · Piezas individuales y compartidas</span>
       </p>
       <div class="flex items-center gap-4 font-bold text-white" style="color: #ffffff !important;">
         <a href="tel:+56979655573" class="hover:text-emerald-300 transition-colors" style="color: #ffffff !important;">+56 9 7965 5573</a>
@@ -45,7 +45,7 @@ const navItems = [
               const isActive =
                 item.href === '/'
                   ? pathname === '/'
-                  : pathname.startsWith(item.href.replace('/#instalaciones', '/instalaciones'));
+                  : pathname.startsWith(item.href);
               return (
                 <li>
                   <a
