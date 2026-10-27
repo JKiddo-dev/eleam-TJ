@@ -3,7 +3,7 @@ const spaces = [
   {
     category: 'Exteriores',
     title: 'Jardines y Terrazas Soleadas',
-    description: 'Áreas verdes tranquilas y terrazas techadas para el paseo y descanso al aire libre.',
+    description: 'Áreas verdes tranquilas y terrazas techadas en un solo nivel para pasear y descansar al aire libre.',
     image: '/images/residencia/03-terraza-jardin.jpg',
     alt: 'Terraza techada y jardín soleado en Residencia Teresita de Jesús en Vitacura',
     lightboxIndex: 0,
@@ -11,23 +11,23 @@ const spaces = [
   {
     category: 'Estadía',
     title: 'Piezas Individuales y Compartidas',
-    description: 'Dormitorios luminosos, climatizados y equipados para asegurar privacidad y confort.',
+    description: 'Dormitorios luminosos, ventilados y acogedores para asegurar privacidad y descanso reparador.',
     image: '/images/residencia/02-habitacion-luminosa.jpg',
     alt: 'Pieza luminosa con piso de madera y ventana al jardín en Vitacura',
     lightboxIndex: 1,
   },
   {
-    category: 'Espacios Comunes',
-    title: 'Salones Luminosos y Climatizados',
-    description: 'Ambientes amplios y accesibles pensados para la convivencia diaria y visitas familiares.',
+    category: 'Accesibilidad',
+    title: 'Casa de 1 Piso y Salones Amplios',
+    description: 'Distribución íntegra en un solo piso sin escaleras para un desplazamiento cómodo y seguro.',
     image: '/images/residencia/10-salon-principal.jpg',
-    alt: 'Salón principal amplio e iluminado con residentes compartiendo actividades',
+    alt: 'Salón principal amplio en casa de un piso en Vitacura',
     lightboxIndex: 2,
   },
   {
     category: 'Vida Activa',
     title: 'Talleres y Estimulación Diaria',
-    description: 'Lectura, ajedrez y actividades motrices que promueven el bienestar cognitivo.',
+    description: 'Lectura, pintura y dinámicas cotidianas que promueven el bienestar cognitivo y la compañía.',
     image: '/images/residencia/08-talleres-cognitivos.jpg',
     alt: 'Residentes participando en taller de pintura y lectura junto al ventanal',
     lightboxIndex: 3,
@@ -42,17 +42,17 @@ const carouselPhotos = [
   },
   {
     image: '/images/residencia/09-apoyo-personalizado.jpg',
-    caption: 'Acompañamiento cercano y dedicado en cada actividad',
+    caption: 'Atención personal y acompañamiento en cada actividad',
     lightboxIndex: 5,
   },
   {
     image: '/images/residencia/04-cuidado-acompanamiento.jpg',
-    caption: 'Calidez humana y supervisión permanente',
+    caption: 'Cercanía humana y cuidado diario en un ambiente familiar',
     lightboxIndex: 6,
   },
   {
-    image: '/images/residencia/06-comunidad-vitacura.jpg',
-    caption: 'Encuentro y lectura con luz natural de mañana',
+    image: '/images/residencia/17-rincon-lectura.jpg',
+    caption: 'Espacios tranquilos y luminosos para el hábito de la lectura',
     lightboxIndex: 7,
   },
   {
@@ -61,49 +61,24 @@ const carouselPhotos = [
     lightboxIndex: 8,
   },
   {
-    image: '/images/residencia/17-rincon-lectura.jpg',
-    caption: 'Espacios tranquilos para el hábito de la lectura',
+    image: '/images/residencia/16-taller-compartido.jpg',
+    caption: 'Talleres artísticos grupales en mesa común',
     lightboxIndex: 9,
+  },
+  {
+    image: '/images/residencia/14-motricidad-fina.jpg',
+    caption: 'Ejercicios diarios de motricidad fina y expresión creativa',
+    lightboxIndex: 10,
+  },
+  {
+    image: '/images/residencia/15-taller-artistico.jpg',
+    caption: 'Arte y lectura ilustrada durante la jornada',
+    lightboxIndex: 11,
   },
   {
     image: '/images/residencia/13-estimulacion-mental.jpg',
     caption: 'Partidas de ajedrez y concentración activa',
-    lightboxIndex: 10,
-  },
-  {
-    image: '/images/residencia/16-taller-compartido.jpg',
-    caption: 'Talleres artísticos grupales en mesa común',
-    lightboxIndex: 11,
-  },
-  {
-    image: '/images/residencia/11-vida-activa.jpg',
-    caption: 'Convivencia diaria en salones climatizados',
     lightboxIndex: 12,
-  },
-  {
-    image: '/images/residencia/14-motricidad-fina.jpg',
-    caption: 'Ejercicios de motricidad fina y expresión creativa',
-    lightboxIndex: 13,
-  },
-  {
-    image: '/images/residencia/15-taller-artistico.jpg',
-    caption: 'Arte y lectura botánica durante la jornada',
-    lightboxIndex: 14,
-  },
-  {
-    image: '/images/residencia/07-lectura-ajedrez.jpg',
-    caption: 'Mañanas recreativas con vista a los jardines',
-    lightboxIndex: 15,
-  },
-  {
-    image: '/images/residencia/18-tarde-recreativa.jpg',
-    caption: 'Recreación y camaradería entre residentes',
-    lightboxIndex: 16,
-  },
-  {
-    image: '/images/residencia/12-partida-ajedrez.jpg',
-    caption: 'Entusiasmo y agilidad mental en cada jornada',
-    lightboxIndex: 17,
   },
 ];
 
@@ -113,12 +88,12 @@ const allLightboxItems = [
 ];
 ---
 
-<section id="instalaciones" class="py-20 sm:py-26 px-4 sm:px-6 lg:px-8 bg-neutral-100 border-y border-neutral-200">
+<section id="instalaciones" class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-100 border-b border-neutral-200">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-14">
       <div class="max-w-2xl">
         <p class="text-xs uppercase tracking-[0.22em] text-neutral-500 font-bold mb-2">
-          Nuestra Casa en Islas Marianas 1791 · Vitacura
+          Nuestra Casa de 1 Piso · Islas Marianas 1791, Vitacura
         </p>
         <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-tight leading-tight">
           Instalaciones pensadas para la calma y la seguridad
@@ -176,10 +151,10 @@ const allLightboxItems = [
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-7">
         <div>
           <p class="text-xs uppercase tracking-[0.22em] text-neutral-500 font-bold mb-1.5">
-            Galería Completa · Registro Real
+            Galería Fotográfica · Registro Real
           </p>
           <h3 class="font-serif text-2xl sm:text-3xl font-bold text-neutral-950 tracking-tight">
-            Vida cotidiana y acompañamiento en nuestra residencia
+            Vida cotidiana y atención personal en nuestra residencia
           </h3>
         </div>
 
@@ -257,7 +232,7 @@ const allLightboxItems = [
           </svg>
           <span>Arrastre la galería o haga clic sobre cualquier fotografía para ampliarla</span>
         </p>
-        <span class="text-neutral-500 font-medium">18 fotografías reales en Vitacura</span>
+        <span class="text-neutral-500 font-medium">13 fotografías seleccionadas en Vitacura</span>
       </div>
     </div>
   </div>

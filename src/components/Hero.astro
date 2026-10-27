@@ -2,28 +2,37 @@
 const panels = [
   {
     number: 'I',
-    title: 'Cuidado y vocación',
-    subtitle: 'Enfermería permanente las 24 horas y acompañamiento cercano diario',
-    image: '/images/residencia/04-cuidado-acompanamiento.jpg',
-    alt: 'Equipo de cuidado acompañando a nuestros residentes en salón luminoso',
+    title: 'Atención personal',
+    subtitle: 'Cuidado cercano las 24 horas, 5 comidas diarias y lavado de ropa incluido',
+    image: '/images/residencia/09-apoyo-personalizado.jpg',
+    alt: 'Atención personal y acompañamiento dedicado a cada residente',
     position: 'object-center',
   },
   {
     number: 'II',
-    title: 'Piezas individuales y compartidas',
-    subtitle: 'Habitaciones luminosas, climatizadas y adaptadas para cada residente',
+    title: 'Casa de 1 piso',
+    subtitle: 'Piezas individuales y compartidas en un solo nivel seguro y luminoso',
     image: '/images/residencia/02-habitacion-luminosa.jpg',
-    alt: 'Habitación luminosa y adaptada en Residencia Teresita de Jesús en Vitacura',
+    alt: 'Habitación luminosa en casa de un piso en Vitacura',
     position: 'object-center',
   },
   {
     number: 'III',
-    title: 'Vida y tranquilidad',
-    subtitle: 'Jardines soleados, talleres diarios y calidez de hogar en Vitacura',
+    title: 'Seguimiento médico y hogar',
+    subtitle: '1 visita médica personal semanal con 10 años de experiencia en el hogar',
     image: '/images/residencia/01-jardin-convivencia.jpg',
     alt: 'Residentes disfrutando del jardín en nuestra sede de Vitacura',
     position: 'object-[50%_20%]',
   },
+];
+
+const highlights = [
+  'Casa de 1 piso',
+  'Piezas individuales y compartidas',
+  'Atención personal 24/7',
+  '5 comidas diarias',
+  'Lavado de ropa',
+  'Visita médica semanal (10 años en el hogar)',
 ];
 ---
 
@@ -32,7 +41,7 @@ const panels = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
       {
         panels.map((panel) => (
-          <article class="group relative h-[390px] sm:h-[460px] lg:h-[540px] rounded-2xl overflow-hidden shadow-md border border-neutral-800 bg-neutral-900 flex flex-col justify-between p-6 sm:p-8">
+          <article class="group relative h-[390px] sm:h-[460px] lg:h-[520px] rounded-2xl overflow-hidden shadow-md border border-neutral-800 bg-neutral-900 flex flex-col justify-between p-6 sm:p-8">
             <img
               src={panel.image}
               alt={panel.alt}
@@ -79,7 +88,7 @@ const panels = [
   </div>
 
   <div
-    class="text-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-t border-neutral-900"
+    class="text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-neutral-900"
     style="background-color: #0e1914 !important; color: #ffffff !important;"
   >
     <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -100,9 +109,16 @@ const panels = [
         “Un 12 de marzo se creó mi historia pensada en mis padres. Han pasado tantos años y aún me emociono.”
       </blockquote>
 
-      <p class="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-2xl mx-auto font-normal" style="color: #d1d5db !important;">
-        Piezas individuales y compartidas, enfermería las 24 horas y calidez de hogar en nuestra única casa en Vitacura.
-      </p>
+      <ul class="pt-1 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:text-sm font-medium max-w-3xl mx-auto" style="color: #e5e7eb !important;">
+        {
+          highlights.map((item) => (
+            <li class="inline-flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/80 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))
+        }
+      </ul>
 
       <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
@@ -113,11 +129,11 @@ const panels = [
           Agendar Visita Presencial
         </a>
         <a
-          href="/quienes-somos"
+          href="/servicios-e-instalaciones"
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-white hover:bg-white hover:text-neutral-950 text-white font-bold text-base rounded-xl transition-all duration-200 focus:outline-none shadow-sm"
           style="color: #ffffff !important; border-color: #ffffff !important; background-color: rgba(255, 255, 255, 0.1) !important;"
         >
-          Conocer Nuestra Historia
+          Servicios e Instalaciones
         </a>
       </div>
     </div>
