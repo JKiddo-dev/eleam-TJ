@@ -1,4 +1,6 @@
 ---
+const WHATSAPP_URL =
+  'https://wa.me/56979655573?text=Hola%2C%20quisiera%20agendar%20una%20visita%20en%20Residencia%20Teresita%20de%20Jes%C3%BAs%20en%20Vitacura.';
 ---
 
 <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-100 border-t border-neutral-300">
@@ -14,16 +16,18 @@
     <div class="w-16 h-px bg-neutral-400 mx-auto" />
 
     <p class="text-base sm:text-lg text-neutral-800 leading-relaxed max-w-2xl mx-auto font-normal">
-      Disponemos de piezas individuales y compartidas en nuestra casa de calle Islas Marianas 1791, Vitacura. Coordinamos recorridos guiados personalizados para usted y su familia.
+      Disponemos de piezas individuales y compartidas en nuestra casa de 1 piso en Islas Marianas 1791, Vitacura. Las visitas no tienen horario restringido; solo es necesario agendar previamente por WhatsApp o teléfono.
     </p>
 
     <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a
-        href="/contacto"
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-base rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-neutral-950"
         style="background-color: #0e1914 !important; color: #ffffff !important;"
       >
-        Agendar Visita Presencial
+        Agendar por WhatsApp
       </a>
       <a
         href="tel:+56979655573"

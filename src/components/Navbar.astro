@@ -1,12 +1,14 @@
 ---
 const pathname = Astro.url.pathname;
 
+const WHATSAPP_URL =
+  'https://wa.me/56979655573?text=Hola%2C%20quisiera%20agendar%20una%20visita%20en%20Residencia%20Teresita%20de%20Jes%C3%BAs%20en%20Vitacura.';
+
 const navItems = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios e Instalaciones', href: '/servicios-e-instalaciones' },
   { label: 'Quiénes Somos', href: '/quienes-somos' },
   { label: 'Testimonios', href: '/testimonios' },
-  { label: 'Trabaja con Nosotros', href: '/trabaja-con-nosotros' },
 ];
 ---
 
@@ -66,7 +68,9 @@ const navItems = [
         </ul>
 
         <a
-          href="/contacto"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-6 py-2.5 bg-neutral-950 hover:bg-neutral-800 text-white text-sm font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-neutral-950"
           style="background-color: #0e1914 !important; color: #ffffff !important;"
         >
@@ -76,7 +80,9 @@ const navItems = [
 
       <div class="flex lg:hidden items-center gap-2.5">
         <a
-          href="/contacto"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-3.5 py-2 bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold rounded-lg shadow-sm transition-colors"
           style="background-color: #0e1914 !important; color: #ffffff !important;"
         >
@@ -151,11 +157,13 @@ const navItems = [
 
     <div class="mt-8 pt-2">
       <a
-        href="/contacto"
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         class="block w-full text-center py-4 px-6 bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-base rounded-xl shadow-md transition-colors mobile-nav-link"
         style="background-color: #0e1914 !important; color: #ffffff !important;"
       >
-        Agendar Visita en Vitacura
+        Agendar Visita por WhatsApp
       </a>
     </div>
   </div>
