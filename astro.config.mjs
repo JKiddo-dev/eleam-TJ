@@ -6,5 +6,5 @@ export default defineConfig({
   output: 'hybrid',
   adapter: netlify(),
   integrations: [tailwind()],
-  site: 'https://residenciateresitadejesus.cl',
+  site: 'https://eleamteresitadejesus.cl',
 });

@@ -107,7 +107,7 @@ export const POST: APIRoute = async ({ request }) => {
     const emailTo =
       import.meta.env.CONTACT_EMAIL_TO ||
       process.env.CONTACT_EMAIL_TO ||
-      'contacto@residenciateresitadejesus.cl';
+      'contacto@eleamteresitadejesus.cl';
     const emailFrom =
       import.meta.env.CONTACT_EMAIL_FROM ||
       process.env.CONTACT_EMAIL_FROM ||

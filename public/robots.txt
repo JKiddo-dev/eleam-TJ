@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /contacto
+Disallow: /trabaja-con-nosotros
+
+Sitemap: https://eleamteresitadejesus.cl/sitemap.xml
