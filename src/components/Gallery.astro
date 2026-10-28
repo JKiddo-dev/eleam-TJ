@@ -8,7 +8,7 @@ const spaces = [
     title: 'Jardines y Terrazas Soleadas',
     description: 'Áreas verdes tranquilas y terrazas techadas en un solo nivel para pasear y descansar al aire libre.',
     image: '/images/residencia/03-terraza-jardin.jpg',
-    alt: 'Terraza techada y jardín soleado en Residencia Teresita de Jesús en Vitacura',
+    alt: 'Terraza techada y jardín soleado en Hogar Teresita de Jesús, residencia de reposo en Vitacura',
     lightboxIndex: 0,
   },
   {
@@ -16,7 +16,7 @@ const spaces = [
     title: 'Piezas Individuales y Compartidas',
     description: 'Dormitorios luminosos, ventilados y acogedores para asegurar privacidad y descanso reparador.',
     image: '/images/residencia/02-habitacion-luminosa.jpg',
-    alt: 'Pieza luminosa con piso de madera y ventana al jardín en Vitacura',
+    alt: 'Pieza luminosa con vista al jardín en ELEAM y hogar de reposo Teresita de Jesús en Vitacura',
     lightboxIndex: 1,
   },
   {
@@ -24,7 +24,7 @@ const spaces = [
     title: 'Casa de 1 Piso y Salones Amplios',
     description: 'Distribución íntegra en un solo piso sin escaleras para un desplazamiento cómodo y seguro.',
     image: '/images/residencia/10-salon-principal.jpg',
-    alt: 'Salón principal amplio en casa de un piso en Vitacura',
+    alt: 'Salón principal en casa de un piso para el cuidado de adultos mayores en Vitacura',
     lightboxIndex: 2,
   },
   {
@@ -32,7 +32,7 @@ const spaces = [
     title: 'Talleres y Estimulación Diaria',
     description: 'Lectura, pintura y dinámicas cotidianas que promueven el bienestar cognitivo y la compañía.',
     image: '/images/residencia/08-talleres-cognitivos.jpg',
-    alt: 'Residentes participando en taller de pintura y lectura junto al ventanal',
+    alt: 'Taller cognitivo y cuidado de adultos mayores en Residencia Teresita de Jesús, Vitacura',
     lightboxIndex: 3,
   },
 ];
@@ -41,46 +41,55 @@ const carouselPhotos = [
   {
     image: '/images/residencia/01-jardin-convivencia.jpg',
     caption: 'Tardes soleadas en nuestro jardín de Vitacura',
+    alt: 'Jardín y áreas verdes del Hogar Teresita de Jesús en Islas Marianas 1791, Vitacura',
     lightboxIndex: 4,
   },
   {
     image: '/images/residencia/09-apoyo-personalizado.jpg',
     caption: 'Atención personal y acompañamiento en cada actividad',
+    alt: 'Atención personal y cuidado de adultos mayores en residencia de reposo en Vitacura',
     lightboxIndex: 5,
   },
   {
     image: '/images/residencia/04-cuidado-acompanamiento.jpg',
     caption: 'Cercanía humana y cuidado diario en un ambiente familiar',
+    alt: 'Acompañamiento diario en casa de reposo y ELEAM Teresita de Jesús en Vitacura',
     lightboxIndex: 6,
   },
   {
     image: '/images/residencia/17-rincon-lectura.jpg',
     caption: 'Espacios tranquilos y luminosos para el hábito de la lectura',
+    alt: 'Rincón de lectura luminoso en Hogar de Reposo Teresita de Jesús, Vitacura',
     lightboxIndex: 7,
   },
   {
     image: '/images/residencia/05-ajedrez-compania.jpg',
     caption: 'Juegos de salón que fortalecen la memoria y el vínculo',
+    alt: 'Estimulación cognitiva y ajedrez en Residencia Teresita de Jesús para adultos mayores',
     lightboxIndex: 8,
   },
   {
     image: '/images/residencia/16-taller-compartido.jpg',
     caption: 'Talleres artísticos grupales en mesa común',
+    alt: 'Taller artístico grupal en hogar de reposo para adultos mayores en Vitacura',
     lightboxIndex: 9,
   },
   {
     image: '/images/residencia/14-motricidad-fina.jpg',
     caption: 'Ejercicios diarios de motricidad fina y expresión creativa',
+    alt: 'Actividades de motricidad fina y cuidado del adulto mayor en ELEAM Vitacura',
     lightboxIndex: 10,
   },
   {
     image: '/images/residencia/15-taller-artistico.jpg',
     caption: 'Arte y lectura ilustrada durante la jornada',
+    alt: 'Jornada de arte y recreación en Residencia y Hogar Teresita de Jesús',
     lightboxIndex: 11,
   },
   {
     image: '/images/residencia/13-estimulacion-mental.jpg',
     caption: 'Partidas de ajedrez y concentración activa',
+    alt: 'Partida de ajedrez y compañía activa en residencia de adultos mayores en Vitacura',
     lightboxIndex: 12,
   },
 ];
@@ -208,7 +217,7 @@ const allLightboxItems = [
               >
                 <img
                   src={photo.image}
-                  alt={photo.caption}
+                  alt={photo.alt}
                   width="720"
                   height="960"
                   loading="lazy"

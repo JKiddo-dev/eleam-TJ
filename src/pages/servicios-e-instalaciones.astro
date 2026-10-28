@@ -3,11 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import Services from '../components/Services.astro';
 import Gallery from '../components/Gallery.astro';
 import Contact from '../components/Contact.astro';
+
+const serviceSchema = [
+  {
+    '@type': 'Service',
+    name: 'Residencia, Hogar de Reposo y Cuidado Integral de Adultos Mayores en Vitacura',
+    provider: { '@id': 'https://eleamteresitadejesus.cl/#organization' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Vitacura' },
+    serviceType: 'Hogar de reposo y ELEAM para adultos mayores',
+    description:
+      'Cuidado integral de adultos mayores en casa de 1 piso en Vitacura: piezas individuales y compartidas, enfermería TENS 24 horas, visita médica personal semanal, 5 comidas diarias y lavado de ropa.',
+  },
+];
 ---
 
 <Layout
-  title="Servicios e Instalaciones | Residencia Teresita de Jesús — Vitacura"
-  description="Conozca nuestras instalaciones en casa de 1 piso en Islas Marianas 1791, Vitacura: piezas individuales y compartidas, 5 comidas diarias, lavado de ropa, atención personal y visita médica semanal."
+  title="Servicios de Cuidado de Adultos Mayores e Instalaciones | Hogar Teresita de Jesús Vitacura"
+  description="Servicios de nuestra casa de reposo y ELEAM en Islas Marianas 1791, Vitacura: casa de 1 piso, piezas individuales y compartidas, atención personal 24/7, visita médica semanal y 5 comidas diarias."
+  extraSchema={serviceSchema}
 >
   <main>
     <section

@@ -18,11 +18,26 @@ const officialTestimonials = [
     context: 'Atención personalizada y tranquilidad familiar',
   },
 ];
+const reviewSchema = officialTestimonials.map((item) => ({
+  '@type': 'Review',
+  itemReviewed: { '@id': 'https://eleamteresitadejesus.cl/#organization' },
+  author: {
+    '@type': 'Person',
+    name: item.author,
+  },
+  reviewBody: item.quote,
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: '5',
+    bestRating: '5',
+  },
+}));
 ---
 
 <Layout
-  title="Testimonios Reales | Residencia Teresita de Jesús — Vitacura"
-  description="Conozca las experiencias de nuestros residentes y sus familias en Residencia Teresita de Jesús en Islas Marianas 1791, Vitacura."
+  title="Testimonios | Hogar y Residencia Teresita de Jesús — Adulto Mayor en Vitacura"
+  description="Experiencias reales de residentes y familias sobre el cuidado de adultos mayores en Hogar y Residencia Teresita de Jesús, casa de reposo y ELEAM en Vitacura."
+  extraSchema={reviewSchema}
 >
   <main>
     <section class="text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-neutral-900" style="background-color: #0e1914 !important; color: #ffffff !important;">
